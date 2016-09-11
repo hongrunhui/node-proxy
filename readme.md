@@ -4,7 +4,7 @@
 </blockquote><br/>
 ###使用方法
 1、直接下载文件到你的node后端服务主目录下（或者直接把```node-proxy```下的```proxy.js```文件拷贝到主目录下），如我的文件目录如下
-![Alt text](./1473560700120.png)
+![Alt text](./images/1.png)
 
 
 2、安装依赖文件，在你的```package.json```中的依赖项加入```http、request、express、body-parser、ejs```等依赖项，如我的package.json：
@@ -52,7 +52,7 @@ http.createServer(app).listen(port);
 console.log("正在监听%d端口...",port);
 ```
 以上代码实现请求将[聚合数据-天气API](https://www.juhe.cn/docs/api/id/73)代理到本地的/api/weather路径下。使用接口方法```node main.js```：
-![Alt text](./1473561163276.png)
+![Alt text](./images/2.png)
 然后在index.html中加入以下代码：
 ```
 <!DOCTYPE html>
@@ -82,5 +82,5 @@ $.get('/api/weather',tianqiData,function(data){
 
 ```
 浏览器输入```localhost:2016```,结果如下：
-![Alt text](./1473561224840.png)
+![Alt text](./images/3.png)
 之前在前端调用聚合数据的api是需要会出现跨域问题（貌似还不能使用jsonp），现在使用这个可以解决这个问题.
